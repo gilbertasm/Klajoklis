@@ -24,21 +24,9 @@ int main(int argc, char **argv)
     read_file (graph, fp);
     make_adjacent_list(graph);
     
-    
-    
     find_shortest_path(graph, 0);
     print_path (graph, 0, graph->size - 1);
-    
-    
+      
     return 0;
     
-    
-    
-    
 }
-    
-
-
-
-    
-

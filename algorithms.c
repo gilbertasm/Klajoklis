@@ -9,7 +9,7 @@ void dfs_visit (Graph *graph, int u) {
     Elem *adj_list, *head;
     int v;
     
-    graph->global_time++;
+    //graph->global_time++;
     graph->info[u]->color = GREY;
     
     adj_list = graph->q[u]->head;
@@ -28,11 +28,11 @@ void dfs_visit (Graph *graph, int u) {
     
   
     
-    graph->info[u]->color = BLACK;
+    /*graph->info[u]->color = BLACK;
     graph->global_time++;
-    graph->info[u]->time = graph->global_time;
+    graph->info[u]->time = graph->global_time; */
     
-    insert_first(graph->topological_order, u);
+    insert_first(graph->topological_order, u); 
     
     
     
@@ -114,7 +114,7 @@ int dfs (Graph *graph) {
         info[i]->color = WHITE;
     }
     
-    graph->global_time = 0;
+    //  graph->global_time = 0;
     for (i = 0; i < size; i++) {
         if (info[i]->color == WHITE) 
             dfs_visit(graph, 0);
